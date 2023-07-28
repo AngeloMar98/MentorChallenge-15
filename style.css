@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-red: #fb6087;
+  --grayish-blue: #8486a9;
+  --dark-des-blue: #343650;
+  --darker-blue: #1e1f29;
+  --darkest-blue: #191a24;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  background-image: url(images/bg-stars.svg),
+    linear-gradient(var(--darkest-blue), var(--darker-blue));
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.background-contain {
+  background-position-x: right;
+  background-size: 100% contain;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  margin-top: 14rem;
+  padding: 0 2.4rem;
+  text-align: center;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main > p {
+  font-size: 2.2rem;
+  letter-spacing: 8px;
+  margin-bottom: 10rem;
+}
+
+.counter {
+  gap: 2.4rem;
+  width: fit-content;
+}
+
+.counter div {
+  text-align: center;
+}
+
+.counter-box {
+  background-image: linear-gradient(
+    to bottom,
+    #2c2c44 0%,
+    #2c2c44 50%,
+    var(--dark-des-blue) 50%,
+    var(--dark-des-blue) 100%
+  );
+  border-radius: 8px;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 8px 0 1px var(--darkest-blue);
+  position: relative;
+}
+
+.counter-box-text {
+  font-size: 10rem;
+  background-image: linear-gradient(
+    to bottom,
+    #e2567a 0%,
+    #e2567a 50%,
+    #fb6087 50%,
+    #fb6087 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.counter-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  padding: 0.8rem;
+  border-radius: 50%;
+
+  background-image: linear-gradient(
+    to left,
+    var(--darkest-blue) 0%,
+    var(--darkest-blue) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.counter-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  padding: 0.8rem;
+  border-radius: 50%;
+
+  background-image: linear-gradient(
+    to right,
+    var(--darkest-blue) 0%,
+    var(--darkest-blue) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.counter-name {
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  color: var(--grayish-blue);
+  letter-spacing: 7px;
+}
+
+.footer {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+
+  height: 200px;
+
+  background-image: url(images/pattern-hills.svg);
+
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+}
+
+.socials {
+  align-items: center;
+  background-color: transparent;
+  gap: 2.2rem;
+
+  justify-content: center;
+}
+
+.social-icon:hover {
+  cursor: pointer;
+  filter: invert(47%) sepia(76%) saturate(1478%) hue-rotate(313deg)
+    brightness(105%) contrast(97%);
+}
+
+@media (max-width: 53em) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .main {
+    margin-top: 24rem;
+  }
+
+  .footer {
+    margin-top: 20rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .counter-box-text {
+    font-size: 6.4rem;
+  }
+}
+
+@media (max-width: 32.5em) {
+  .main {
+    margin-top: 18rem;
+  }
+
+  .footer {
+    margin-top: 12rem;
+  }
+
+  .socials {
+    gap: 3.8rem;
+  }
+
+  .main > p {
+    font-size: 2.8rem;
+    letter-spacing: 5px;
+  }
+
+  .counter {
+    gap: 1.2rem;
+  }
+
+  .counter-box {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .counter-box-text {
+    font-size: 3.2rem;
+  }
+
+  .counter-name {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .counter-box::after,
+  .counter-box::before {
+    padding: 0.4rem;
+  }
+}
