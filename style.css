@@ -28,6 +28,8 @@ body {
   background-attachment: fixed;
 }
 
+/* GENERAL */
+
 .background-contain {
   background-position-x: right;
   background-size: 100% contain;
@@ -44,6 +46,8 @@ body {
 .flex-column {
   flex-direction: column;
 }
+
+/* STYLING */
 
 .main {
   width: 100%;
@@ -63,6 +67,7 @@ body {
   margin-bottom: 10rem;
 }
 
+/* ENTIRE COUNTER FLEX */
 .counter {
   gap: 2.4rem;
   width: fit-content;
@@ -72,7 +77,10 @@ body {
   text-align: center;
 }
 
+/* COUNTER BOX */
+
 .counter-box {
+  width: 18rem;
   background-image: linear-gradient(
     to bottom,
     #2c2c44 0%,
@@ -145,6 +153,7 @@ body {
   letter-spacing: 7px;
 }
 
+/* FOOTER */
 .footer {
   display: flex;
   justify-content: center;
@@ -173,6 +182,8 @@ body {
     brightness(105%) contrast(97%);
 }
 
+/* QUERIES */
+
 @media (max-width: 53em) {
   html {
     font-size: 52.5%;
@@ -192,6 +203,10 @@ body {
 }
 
 @media (max-width: 44em) {
+  .counter-box {
+    width: 13rem;
+  }
+
   .counter-box-text {
     font-size: 6.4rem;
   }
@@ -216,6 +231,7 @@ body {
   }
 
   .counter-box {
+    width: 11rem;
     padding: 1.2rem 2rem;
   }
 
@@ -240,6 +256,7 @@ body {
   }
 
   .counter-box {
+    width: 8rem;
     padding: 1.2rem 1.4rem;
   }
 
